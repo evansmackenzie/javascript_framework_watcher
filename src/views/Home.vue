@@ -76,9 +76,7 @@ export default {
             overflow: "justify",
           },
         },
-        tooltip: {
-          valueSuffix: " millions",
-        },
+
         plotOptions: {
           bar: {
             dataLabels: {
