@@ -121,9 +121,10 @@ export default {
       this.vue_stargazers_count = response.data["stargazers_count"];
       this.vue_subscribers_count = response.data["subscribers_count"];
       this.vue_forks_count = response.data["forks_count"];
-      this.chartOptions.series[0].data = [this.vue_stargazers_count];
-      this.chartOptions.series[1].data = [this.vue_subscribers_count];
-      this.chartOptions.series[2].data = [this.vue_forks_count];
+      debugger;
+      this.chartOptions.series[0].data.push(this.vue_stargazers_count);
+      this.chartOptions.series[1].data.push(this.vue_subscribers_count);
+      this.chartOptions.series[2].data.push(this.vue_forks_count);
     });
     axios
       .get("https://api.github.com/repos/angular/angular.js")
