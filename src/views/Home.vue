@@ -65,9 +65,9 @@ export default {
 
         xAxis: {
           categories: ["VueJS", "Angular", "Ember", "Svelte", "React"],
-          title: {
-            text: null,
-          },
+          // title: {
+          //   text: null,
+          // },
         },
         yAxis: {
           min: 0,
@@ -115,7 +115,7 @@ export default {
       },
     };
   },
-  created: function () {
+  beforeCreate: function () {
     axios.get("https://api.github.com/repos/vuejs/vue").then((response) => {
       console.log(response.data);
       this.vue_stargazers_count = response.data["stargazers_count"];
