@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div>
+    <div v-if="this.vue_stargazers_count">
       <highcharts class="hc" :options="chartOptions" ref="chart"></highcharts>
     </div>
     <h1>vuejs repo</h1>
@@ -65,9 +65,9 @@ export default {
 
         xAxis: {
           categories: ["VueJS", "Angular", "Ember", "Svelte", "React"],
-          // title: {
-          //   text: null,
-          // },
+          title: {
+            text: null,
+          },
         },
         yAxis: {
           min: 0,
